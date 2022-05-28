@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+
+.menu-main {
+    list-style: none;
+    margin: 40px 0 5px;
+    padding: 25px 0 5px;
+    text-align: center;
+    background: white;
+    opacity: 0.9;
+}
+
+.menu-main li {
+    display: inline-block;
+}
+
+.menu-main li:after {
+    content: "|";
+    color: #606060;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.menu-main li:last-child:after {
+    content: none;
+}
+
+.menu-main a {
+    text-decoration: none;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0 34px 0 30px;
+    font-size: 17px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.menu-main a,
+.menu-main a:visited {
+    color: #9d999d;
+}
+
+.menu-main a.current,
+.menu-main a:hover {
+    color: #feb386;
+}
+
+.example-2 .btn-tertiary{color:#555;padding:0;line-height:40px;width:300px;margin:auto;display:block;border:2px solid #555}
+.example-2 .btn-tertiary:hover,.example-2 .btn-tertiary:focus{color:#888;border-color:#888}
+.example-2 .input-file{width:.1px;height:.1px;opacity:0;overflow:hidden;position:absolute;z-index:-1}
+.example-2 .input-file + .js-labelFile{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:0 10px;cursor:pointer}
+.example-2 .input-file + .js-labelFile .icon:before{content:"\f093"}
+.example-2 .input-file + .js-labelFile.has-file .icon:before{content:"\f00c";color:#5AAC7B}

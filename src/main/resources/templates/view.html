@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="/style.css" rel="stylesheet">
+    <title>Title</title>
+</head>
+<body>
+
+<p th:text="${tittle}"/>
+
+<header th:insert="blocks/header :: header"></header>
+
+<form method="POST" enctype="multipart/form-data" action="/uploadfile">
+    <input type="submit" value="Upload">
+    <input type="file" name="file">
+</form>
+</body>
+</html>

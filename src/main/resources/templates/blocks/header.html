@@ -1,0 +1,30 @@
+<div th:fragment="header">
+
+    <!--START MENU-->
+    <ul class="menu-main">
+        <li>
+            <a href="http://localhost:8080/specialists">
+                Специалисты
+            </a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/addspecialist">
+                Добавить специалиста
+            </a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/rectime">
+               Домашняя страница
+            </a>
+        </li>
+
+        <li th:if="2==8">
+            <a href="http://localhost:8080/library/book">
+                Авторизация
+            </a>
+        </li>
+
+
+    </ul>
+    <!--FINISH MENU-->
+</div>

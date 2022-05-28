@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <link href="/style.css" rel="stylesheet">
+  <title>Specialists</title>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<h2 th:text="${spec.name}"/>
+<h2 th:text="${spec.surename}"/>
+<h2 th:text="${spec.id}"/>
+
+      <form method="post" th:action="@{/deletespecialist(speciddel=${spec.id})}">
+        <button type="submit" id="log" > Удалить</button>
+      </form>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="/style.css" rel="stylesheet">
+    <title>Specialists</title>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<table class="content">
+    <tr>
+        <th>name</th>
+        <th>surename</th>
+    </tr>
+    <tr th:each="specialist:${specialistlist}">
+        <td>
+            <a th:href="@{/specprofile(specid=${specialist.id})}" th:text="${specialist.name}"/>
+        </td>
+        <td th:text="${specialist.surename}"/>
+    </tr>
+</table>
+
+
+</body>
+</html>

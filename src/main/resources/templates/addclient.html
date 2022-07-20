@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="/style.css" rel="stylesheet">
+    <title>Add client</title>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<div class="smog">
+    <form method="post" action="http://localhost:8080/addclient">
+        <div class="container">
+
+            <input type="text" maxlength="20" pattern="[а-яА-Яa-zA-Z]{2,10}[ -]{0,1}[а-яА-Яa-zA-Z]{0,10}"
+                   placeholder="фамилия" name="surename" required oninvalid="this.setCustomValidity('incorrect enter!')"
+                   oninput="setCustomValidity('')">
+
+            <input type="text" maxlength="20" pattern="[а-яА-Яa-zA-Z]{2,10}[ -]{0,1}[а-яА-Яa-zA-Z]{0,10}"
+                   placeholder="имя" name="username" required oninvalid="this.setCustomValidity('incorrect enter!')"
+                   oninput="setCustomValidity('')">
+
+
+
+
+
+            <button type="submit" id="log">ДОБАВИТЬ клиента</button>
+        </div>
+    </form>
+</div>

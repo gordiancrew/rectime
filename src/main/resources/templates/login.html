@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="/style.css" rel="stylesheet">
+    <title>login</title>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<div class="frame">
+    <form method="post" action="http://localhost:8080/registration">
+        <!--div class="container"-->
+        <input type="text" placeholder="login" name="login" required oninvalid="this.setCustomValidity('enter login!')"  oninput="setCustomValidity('')">
+        <input type="password" placeholder="password" name="password" required oninvalid="this.setCustomValidity('enter password!')"  oninput="setCustomValidity('')">
+        <button type="submit" id="logi">signin</button>
+        <div id="reg">
+            <a href="http://localhost:8080/library/registration">
+               registration
+            </a>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

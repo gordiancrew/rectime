@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="/style.css" rel="stylesheet">
+    <title>Clients</title>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<table class="content">
+    <tr>
+
+        <th>surename</th>
+        <th>name</th>
+    </tr>
+    <tr th:each="client:${clientslist}">
+
+        <td th:text="${client.surename}"/>
+        <td th:text="${client.name}"/>
+
+    </tr>
+</table>
+
+
+</body>
+</html>

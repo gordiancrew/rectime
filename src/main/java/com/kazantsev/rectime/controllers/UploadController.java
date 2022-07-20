@@ -16,7 +16,7 @@ public class UploadController {
     private String path;
 
     @RequestMapping("/uploadfile")
-    public String upload(Model model, @RequestParam("file") MultipartFile file, @RequestParam("name") String name) throws IOException {
+    public String upload(Model model, @RequestParam("file") MultipartFile file) throws IOException {
         String fileName = file.getOriginalFilename();
         if (FileUtils.upload(file, path, fileName)) {
             model.addAttribute("tittle", "upload is successful");
@@ -24,6 +24,8 @@ public class UploadController {
         } else {
             model.addAttribute("tittle", "upload is error");
         }
+
+
         return "view";
     }
 }

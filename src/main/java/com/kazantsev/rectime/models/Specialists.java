@@ -13,13 +13,23 @@ public class Specialists {
     private  Integer id;
     private String name;
     private String surename;
+    private String img;
 
     public Specialists() {
     }
 
-    public Specialists(String name, String surename) {
+    public Specialists(String name, String surename, String img) {
         this.name = name;
         this.surename = surename;
+        this.img=img;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 
     public Integer getId() {
